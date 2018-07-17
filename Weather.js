@@ -6,49 +6,52 @@ import PropTypes from 'prop-types';
 
 
 const weatherCases = {
-  Rain : {
-      colors:["#00C6FB", "#005BEA"],
-      title: '비가 내리네요.',
-      subtitle:"우산을 챙겨 가세요.",
-      icon:"ios-rainy"
-  },
-  Clear:{
-      colors:["#FEF253", "#FF7300"],
-      title: '해가 쨍쨍.',
-      subtitle:"빨래 널기 좋은날",
-      icon:"ios-sunny"
-  },
-    Thunderstorm:{
-        colors:["#00ECBC", "#007ADF"],
+    Rain: {
+        colors: ["#00C6FB", "#005BEA"],
+        title: '비가 내리네요.',
+        subtitle: "우산을 챙겨 가세요.",
+        icon: "ios-rainy"
+    },
+    Clear: {
+        colors: ["#FEF253", "#FF7300"],
+        title: '해가 쨍쨍.',
+        subtitle: "빨래 널기 좋은날",
+        icon: "ios-sunny"
+    },
+    Thunderstorm: {
+        colors: ["#00ECBC", "#007ADF"],
         title: '천둥 번개.',
-        subtitle:"각별히 조심하세요",
-        icon:"ios-thunderstorm"
+        subtitle: "각별히 조심하세요",
+        icon: "ios-thunderstorm"
     },
-    Clouds:{
-        colors:["#D7D2CC", "#304352"],
+    Clouds: {
+        colors: ["#D7D2CC", "#304352"],
         title: '구름구름',
-        subtitle:"흐린 날씨입니다.",
-        icon:"ios-cloudy"
-    },Snow:{
-        colors:["#7DE2FC", "#8986E5"],
-        title: '눈온다.',
-        subtitle:"눈 싸움하자.",
-        icon:"ios-snow"
-    },Drizzle:{
-        colors:["#89F7FE", "#66A6FF"],
-        title: '보슬비',
-        subtitle:"보슬비가 내립니다.",
-        icon:"ios-rainy-outline"
+        subtitle: "흐린 날씨입니다.",
+        icon: "ios-cloudy"
     },
-    Haze:{
-        colors:["#89F7FE", "#66A6FF"],
+    Snow: {
+        colors: ["#7DE2FC", "#8986E5"],
+        title: '눈온다.',
+        subtitle: "눈 싸움하자.",
+        icon: "ios-snow"
+    },
+    Drizzle: {
+        colors: ["#89F7FE", "#66A6FF"],
+        title: '보슬비',
+        subtitle: "보슬비가 내립니다.",
+        icon: "ios-rainy-outline"
+    },
+    Haze: {
+        colors: ["#89F7FE", "#D7D2CC"],
         title: '안개',
-        subtitle:"안보임",
-        icon:"ios-rainy-outline"
+        subtitle: "안보임",
+        icon: "ios-rainy-outline"
     }
 };
 
 function Weather({ weatherName, temp }) {
+    console.log(weatherName);
     return (
         <LinearGradient colors={weatherCases[weatherName].colors} style={styles.container}>
             <View style={styles.upper}>
